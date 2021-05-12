@@ -5,7 +5,7 @@ chapter 4, _Building Tests_.
 
 Run the tests with:
 
-`ruby lib/test/producer_test.rb`
+`ruby test/producer_test.rb`
 
-`ruby lib/test/province_test.rb`
+`ruby test/province_test.rb`
 
