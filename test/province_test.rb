@@ -36,6 +36,12 @@ class ProvinceTest < Minitest::Test
       assert(-26, @asia.shortfall)
       assert(-10, @asia.profit)
     end
+
+    def test_empty_string_demand
+      @asia.demand = nil
+      assert(nil, @asia.shortfall)
+      assert(nil, @asia.profit)
+    end
   end
 
   describe 'no producers' do
