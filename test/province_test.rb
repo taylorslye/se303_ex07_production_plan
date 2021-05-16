@@ -35,7 +35,14 @@ class ProvinceTest < Minitest::Test
         price: 20
       }
       @no_producers = Province.new(data)
+    end
+
+    def test_shortfall
+      assert(30, @no_producers.shortfall)
+    end
+
+    
   end
 
-  
+
 end
