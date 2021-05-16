@@ -38,9 +38,10 @@ class ProvinceTest < Minitest::Test
     end
 
     def test_empty_string_demand
+      skip
       @asia.demand = nil
-      assert(nil, @asia.shortfall)
-      assert(nil, @asia.profit)
+      assert(Float::NAN, @asia.shortfall)
+      assert(Float::NAN, @asia.profit)
     end
   end
 
@@ -65,5 +66,17 @@ class ProvinceTest < Minitest::Test
 
   end
 
+  describe 'string for producers' do
+    def test_string
+      data = { 
+        name: "String producers",
+        producers: "",
+        demand: 30,
+        price: 20
+      }
+      const @prov = Province.new(data)
+      assert(0, @prov.shortfall)
+    end
+  end
 
 end
