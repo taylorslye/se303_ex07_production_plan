@@ -26,4 +26,16 @@ class ProvinceTest < Minitest::Test
     end
   end
 
+  describe 'no producers' do
+    def setup
+      data = { 
+        name: "No producers",
+        producers: [],
+        demand: 30,
+        price: 20
+      }
+      @no_producers = Province.new(data)
+  end
+
+  
 end
