@@ -24,6 +24,12 @@ class ProvinceTest < Minitest::Test
       assert_equal(-6, @asia.shortfall)
       assert_equal(292, @asia.profit)
     end
+
+    def test_zero_demand
+      @asia.demand = 0
+      assert(-25, @asia.shortfall)
+      assert(0, @asia.profit)
+    end
   end
 
   describe 'no producers' do
